@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI_MODEL</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="main">
+        <img src="./static/CitiesList.png" class="img1">
+        <img src="./static/aqi_range.png" class="img2">
+        <div class="background-div">
+            <h3>Air Quality Index Predictor</h3>
+            <form action="{{url_for('predict')}}" method="post">
+                <input type="text" name="City" placeholder="Enter City Key(Check City List)"></input><br>
+                <input type="text" name="PM2.5" placeholder="Enter PM2.5"></input><br>
+                <input type="text" name="PM10" placeholder="Enter PM10"></input><br>
+                <input type="text" name="NO" placeholder="Enter NO"></input><br>
+                <input type="text" name="NO2" placeholder="Enter NO2"></input><br>
+                <input type="text" name="NOx" placeholder="Enter NOx"></input><br>
+                <input type="text" name="NH3" placeholder="Enter NH3"></input><br>
+                <input type="text" name="CO" placeholder="Enter CO"></input><br>
+                <input type="text" name="SO2" placeholder="Enter SO2"></input><br>
+                <input type="text" name="O3" placeholder="Enter O3"></input><br>
+                <input type="text" name="Benzene" placeholder="Enter Benzene"></input><br>
+                <input type="text" name="Toluene" placeholder="Enter Toluene"></input><br>
+                <input type="text" name="Xylene" placeholder="Enter Xylene"></input><br>                    
+                <button type="submit">Predict</button>
+            </form>
+            {% if pred_aqi is defined %}
+                {% if 0 <= pred_aqi <= 50 %}
+                    <p>Predicted AQI of {{cityname}}: {{ pred_aqi }} is Good!</p>
+                {% elif 50 < pred_aqi <= 100 %}
+                    <p>Predicted AQI of {{cityname}}: {{ pred_aqi }} is Satisfactory!</p>
+                {% elif 100 < pred_aqi <= 200 %}
+                    <p>Predicted AQI of {{cityname}}: {{ pred_aqi }} is Moderate!</p>
+                {% elif 200 < pred_aqi <= 300 %}
+                    <p>Predicted AQI of {{cityname}}: {{ pred_aqi }} is Poor!</p>
+                {% elif 300 < pred_aqi <= 400 %}
+                    <p>Predicted AQI of {{cityname}}: {{ pred_aqi }} is Very Poor!</p>
+                {% else %}
+                    <p>Predicted AQI of {{cityname}}: {{ pred_aqi }} is Severe!</p>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

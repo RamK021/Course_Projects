@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body {
+    background-image: url("./aqi_image.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100vh;
+    height: 100vh;
+    color: #fff;
+}
+.background-div {
+    background-position: center center;
+    background-color: rgba(116, 112, 112, 0.644);
+    position:absolute;
+    top: 50%;
+    left: 105%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.background-div p {
+    background-image: linear-gradient(90deg, #03228f 0%, #4e95ed 80%);
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: none;
+    margin: 3px 0;
+    color: #fff;
+}
+.background-div input{
+    font-size: 12px;
+    padding: 5px 5px;
+    width: 60%;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    margin: 1px 0;
+    background-color: rgba(255, 255, 255, 0.705);
+}
+.background-div button{
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 6px 6px;
+    width: 40%;
+    border: 10;
+    border-color: #fff;
+    border-radius: 5px;
+    outline: none;
+    margin: 5px 0;
+    background-image: linear-gradient(90deg, #03228f 0%, #4e95ed 100%);
+}
+.background-div button:hover {
+    color: rgb(214, 233, 214);
+}
+.main .img1 {
+    position:absolute;
+    top: 50%;
+    left: 175%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    height: 80%;
+}
+
+.main .img2 {
+    position:absolute;
+    top: 45%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 70%;
+}
