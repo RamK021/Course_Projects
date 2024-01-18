@@ -1,4 +1,4 @@
-## Mini Project || A Web Platform for Air Quality Monitoring             
+## Course Project || A Web Platform for Air Quality Monitoring             
 
 * Developed an AQI Prediction Model and corresponding Flask web application, providing users with a valuable tool to estimate air quality levels based on environmental factors.
 * Employed libraries such as pandas, scikit-learn, and train the model, and evaluate its performance in predicting air quality levels.
