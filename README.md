@@ -1,1 +1,1 @@
-# Minor_Projects
+# Course_Projects
